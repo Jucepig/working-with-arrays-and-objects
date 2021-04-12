@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const {color, make, model, year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,7 +55,11 @@ function greeting( obj ) {
 
 //Code Here
 
-
+const totalPopulation = obj => {
+  let {utah, california, texas, arizona} = obj;
+  let sum = utah +california + texas + arizona;
+  return sum;
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -68,7 +72,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const ingredients = obj => {
+  let {carb, fat, protein} = obj;
+  return objArray = [carb, fat, protein];
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +93,7 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const largeNumbers = ({first, second, third})=> Math.min(first, second, third);
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +105,21 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+const numberGroups = ({a,b,c}) => {
+  // return a.length > b.length && c.length ? a : b.length > a.length && c.length ? b : c.length > a.length && b.length ? c : null;
+  // if(a.length>b.length&&c.length) {
+  //   return a;
+  // } else if(b.length>a.length&&c.length){
+  //   return b;
+  // } else if(c.length>a.length&&b.length){
+  //   return c;
+  // }
+  let longestArr = Math.max(a.length, b.length, c.length);
+  if (longestArr === a.length) {
+    return a;
+  } else if (longestArr === b.length) {
+    return b;
+  } else if (longestArr === c.length) {
+    return c;
+  }
+}
